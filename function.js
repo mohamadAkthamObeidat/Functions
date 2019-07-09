@@ -9,7 +9,11 @@ outputs your fortune to the screen like so:
 Ex: tellFortune('ball player', 'spain', 'Shaq', 3);
 => "You will be a ball player in spain, and married to Shaq with 3 kids."
 */
+function tellFortune(numOfChilds, paerntsName, location, jobTitle) {
+  console.log("you will be ", jobTitle, "in", location, "and married to", paerntsName, "with", numOfChilds, "kids")
 
+}
+tellFortune(3, "ali", "amman", "developer")
 
 /*
 2
@@ -21,7 +25,11 @@ outputs the result to the screen like so: "Your doggie is NN years old in dog ye
 Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
-
+function calculateDogAge(poppyAge) {
+  poppyAge = poppyAge * 7;
+  return console.log("Your dog is ", poppyAge, "years old in dog years");
+}
+calculateDogAge(5);
 
 /*
 3
@@ -45,7 +53,10 @@ and it will return hello + name
 Ex: greet("Jouza")
 => "Hello Jouza"
 */
-
+function greet(name) {
+  return "hello " + name
+}
+console.log(greet("emad"))
 
 /*
 5
@@ -90,7 +101,10 @@ accept 1 parameter and calculate the cube of this number
 Ex: cube(4)
 => 64
 */
-
+function cube(num) {
+  return num ** 3
+}
+console.log(cube(5))
 
 /*
 8
@@ -102,7 +116,11 @@ Ex: multiply(3,4)
 Ex: multiply(5,4)
 => 20
 */
-
+function multiply(num1, num2) {
+  var multi = num1 * num2
+  return multi
+}
+console.log(multiply(6, 5))
 
 /*
 9
@@ -121,7 +139,16 @@ Ex: canIGetADrivingLicense(20)
 => "yes you can"
 
 */
-
+function canIGetAdrivingLicense(age) {
+  if (age >= 20) {
+      return "Yes you can"
+  }
+  else {
+      var x = 20 - age;
+      return "Please comeback after " + x + " years to get one"
+  }
+}
+console.log(canIGetAdrivingLicense(18));
 
 /*
 10
@@ -137,6 +164,15 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
+function samelength(first, second) {
+  if (first.length === second.length) {
+      return true
+  } else {
+      return false
+  }
+}
+console.log(samelength("emad", "duhaa"))
+
 
 /*
 11
@@ -151,6 +187,15 @@ Ex: largerNubmer(5,3)
 => 5
 */
 
+function largerNumber(x, y) {
+  if (x > y) {
+      return x
+  } else {
+      return y
+  }
+
+}
+console.log(largerNumber(6, 5))
 
 /*
 12
@@ -171,6 +216,23 @@ Ex: smallerNubmer(5,3,3)
 => 3
 
 */
+
+function smallerNumber(x, y, z) {
+
+  var min = x
+  if (y < min && y < z) {
+      min = y
+      return min
+  } else if (z < min && z < y) {
+      min = z
+      return min
+  } else {
+
+      return min
+  }
+}
+
+console.log(smallerNumber(3, 1, 0))
 
 /*
 13
@@ -198,6 +260,30 @@ Ex: shorterString("air","tr","car","github","by")
 
 */
 
+function shorterString(one, two, three, fuor, five) {
+  var short = one;
+  if (two.length < short.length) {
+      short = two
+      return short
+
+  } else if (three.length < short.length) {
+      short = three
+      return short
+
+  } else if (fuor.length < short.length) {
+      short = fuor
+      return short
+
+  } else if (five.length < short.length) {
+      short = five
+      return short
+
+  } else {
+      return short
+  }
+}
+console.log(shorterString("emad", "0", "o", "duhaaa", "obeidat"))
+
 /*
 14
 Write a function called longerString
@@ -212,6 +298,25 @@ Ex: longerString("air","schoo","car","github")
 
 try all the cases (change the order of the longestString)
 */
+function longerString(one, two, three, fuor) {
+  var long = one;
+  if (two.length > long.length) {
+      long = two
+      return long
+
+  } else if (three.length > long.length) {
+      long = three
+      return long
+
+  } else if (fuor.length > long.length) {
+      long = fuor
+      return long
+
+  } else {
+      return long
+  }
+}
+console.log(longerString("duhaahjkhjkhjkaduhaahjkhjkhjka", "0", "o", "duhaahjkhjkhjka"))
 
 /*
 15
@@ -226,7 +331,16 @@ Ex: isEven(2)
 => true
 
 */
+function isEven(number) {
 
+  if (number % 2 == 0) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+console.log(isEven(4));
 
 /*
 16
@@ -241,7 +355,16 @@ Ex: isOdd(5)
 => true
 
 */
+function isOdd(number) {
 
+  if (number % 2 !== 0) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+console.log(isOdd(4));
 
 /*
 17
@@ -255,7 +378,17 @@ Ex: positive(-5)
 => 5
 
 */
+function positive(num) {
 
+  if (num < 0) {
+      num = num * -1;
+      return num;
+  }
+  else {
+      return num
+  }
+}
+console.log(positive(2));
 
 /*
 18
@@ -269,7 +402,12 @@ Ex: fullName("Mohammad","Jouza")
 Ex: fullName("Alex", "Mercer")
 => "Alex Mercer"
 */
+function fullName(firstName, lastName) {
+  var fullName = firstName + " " + lastName;
+  return fullName;
+}
 
+console.log(fullName("Mohamad", "Obeidat"))
 
 /*
 19
@@ -284,7 +422,14 @@ Ex: average(5,7,9,3,5)
 => 5.8
 
 */
+function avareg(x, y, z, a, s) {
+  var sum = x + y + z + a + s
+  var avg = sum / 5
+  return avg
 
+
+}
+console.log(avareg(5, 5, 5, 5, 5))
 
 /*
 20
@@ -300,6 +445,11 @@ Ex: randomNumber()
 => 0.475
 
 */
+function randomNumber(max) {
+  var rand = Math.random() * max;
+  return rand
+}
+console.log(randomNumber(1))
 
 /*
 21
@@ -315,7 +465,10 @@ Ex: randomBetweenNumbers(3,100)
 => 23
 
 */
-
+function randomBetweenNumber(max, min) {
+  return Math.random() * (max - min) + min;
+}
+console.log(randomBetweenNumber(10, 1))
 
 /*
 22
@@ -337,7 +490,22 @@ Ex: scoreInUniversty(3)
 Ex: scoreInUniversty(71)
 => "C"
 */
+function scoreInUniversity(mark) {
 
+  if (mark >= 95 && mark <= 100) {
+      console.log("A")
+  } else if (mark >= 85 && mark <= 94) {
+      console.log("B")
+  } else if (mark >= 70 && mark <= 84) {
+      console.log("C")
+  } else if (mark >= 50 && mark <= 69) {
+      console.log("D")
+  } else if (mark >= 0 && mark <= 49) {
+      console.log("F")
+  }
+}
+
+scoreInUniversity(88)
 
 /*
 23
@@ -356,7 +524,22 @@ Ex: counter()
 => 3
 
 */
-
+var x = 0
+function counter() {
+    x++;
+    return x;
+}
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+restCounter()
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
 
 /*
 24
@@ -389,7 +572,9 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
-
+function restCounter(){
+  x = 0;
+}
 
 
 /*
